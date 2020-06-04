@@ -27,12 +27,14 @@ namespace TradeMeAPIAutomationFramework.StepDefinitions
         public void ThenIVerifyTheAPIToGetCategoriesForUsedCarsRanSuccessfully()
         {
             Assert.IsTrue(context.Response.IsSuccessful, "Get User Car Categoried API failed to run successfully");
+
+            // Save Car Category List to context variable , value will be used in later steps
+            context.CarCategoryList = apiSandboxServices.GetUserCarCategories(context.Response);
         }
 
         [Then(@"I verify the number of brands returned are equal to (.*)")]
         public void ThenIVerifyTheNumberOfBrandsReturnedAreEqualTo(int expectedBrandsCount)
         {
-            context.CarCategoryList = apiSandboxServices.GetUserCarCategories(context.Response);
             var actualListedBrandsCount = context.CarCategoryList.Subcategories.Count;
 
             Assert.AreEqual(expectedBrandsCount, actualListedBrandsCount, "Expected Used Car Listed Count : " + expectedBrandsCount + " Actual Listed Brand Count : " + actualListedBrandsCount);
@@ -41,7 +43,7 @@ namespace TradeMeAPIAutomationFramework.StepDefinitions
         [Then(@"I verify that the returned brand list contains brand : ""(.*)""")]
         public void ThenIVerifyThatTheReturnedBrandListContainsBrand(string brandName)
         {
-            Assert.IsTrue(apiSandboxServices.IsBrandPresentInTheList(context.CarCategoryList,brandName),"Brand :" + brandName + " not present in the Car Category list provided.");
+            Assert.IsTrue(apiSandboxServices.IsBrandPresentInTheList(context.CarCategoryList, brandName), "Brand :" + brandName + " not present in the Car Category list provided.");
         }
 
         [Then(@"I verift that the returned brand list doesn't contain brand : ""(.*)""")]
