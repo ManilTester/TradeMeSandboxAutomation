@@ -41,13 +41,13 @@ namespace TradeMeAPIAutomationFramework.StepDefinitions
         [Then(@"I verify that the returned brand list contains brand : ""(.*)""")]
         public void ThenIVerifyThatTheReturnedBrandListContainsBrand(string brandName)
         {
-            Assert.IsTrue(apiSandboxServices.IsBrandPresentInTheList(context.CarCategoryList,brandName));
+            Assert.IsTrue(apiSandboxServices.IsBrandPresentInTheList(context.CarCategoryList,brandName),"Brand :" + brandName + " not present in the Car Category list provided.");
         }
 
         [Then(@"I verift that the returned brand list doesn't contain brand : ""(.*)""")]
         public void ThenIVeriftThatTheReturnedBrandListDoesnTContainBrand(string brandName)
         {
-            Assert.IsFalse(apiSandboxServices.IsBrandPresentInTheList(context.CarCategoryList, brandName));
+            Assert.IsFalse(apiSandboxServices.IsBrandPresentInTheList(context.CarCategoryList, brandName), "Brand :" + brandName + " present in the Car Category list provided.");
         }
     }
 }

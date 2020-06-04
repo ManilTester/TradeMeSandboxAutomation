@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeMeAPIAutomationFramework", "APIAutomationFramework\TradeMeAPIAutomationFramework.csproj", "{38C73917-7760-4401-B417-D032CF5BE924}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeMeWebUIAutomationFramework", "..\TradeMeWebUIAutomationFramework\TradeMeWebUIAutomationFramework.csproj", "{C218F3AE-13CB-4923-B4CD-42F55FF07BA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{38C73917-7760-4401-B417-D032CF5BE924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38C73917-7760-4401-B417-D032CF5BE924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38C73917-7760-4401-B417-D032CF5BE924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C218F3AE-13CB-4923-B4CD-42F55FF07BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C218F3AE-13CB-4923-B4CD-42F55FF07BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C218F3AE-13CB-4923-B4CD-42F55FF07BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C218F3AE-13CB-4923-B4CD-42F55FF07BA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
